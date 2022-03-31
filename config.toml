@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://sfcta.github.io/cmpreport/"
 title = "San Francisco Congestion Management Program (CMP) Reports"
 enableRobotsTXT = true
 # this example loads the theme as hugo module
