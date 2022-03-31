@@ -29,6 +29,6 @@ Every two years, we release a report to update San Francisco’s Congestion Mana
 {{< /column >}}
 
 {{< column >}}
-![diy](/images/Congestion-Pricing-Sergio-Ruiz.jpg)
+![diy](images/Congestion-Pricing-Sergio-Ruiz.jpg)
 {{< /column >}}
 {{< /block >}}
