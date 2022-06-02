@@ -1,6 +1,6 @@
 #  menu items
 [[main]]
-  name = "Reports"
+  name = "Performance Metrics"
   weight = 2
   url = "docs/"
 
