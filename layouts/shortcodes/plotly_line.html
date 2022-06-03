@@ -2,6 +2,8 @@
 {{ $csv := getCSV "," $csvURL }}
 {{ $height := .Get "height" | default "400px" }}
 {{ $title := .Get "title" | default "" }}
+{{ $style := .Get "style" | default "style1" }}
+{{ $tf := .Get "tf" | default "tf1" }}
 
 <div id='{{ .Get "id" }}' style="height:{{$height}}">
 
@@ -10,7 +12,21 @@
 <script>
     var csvdata = {{ $csv }};
 
-    var colors = ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'];
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'style2': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
     var data = [];
     var xvals;
     for (let i in csvdata) {
@@ -20,7 +36,8 @@
             data.push({x: xvals, y: csvdata[i].slice(1),
                         name: csvdata[i][0],
                         type: 'scatter',
-                        marker: {color: colors[i]}
+                        marker: {color: styles[{{ $style }}]['color'][i]},
+                        line: {dash: styles[{{ $style }}]['dash'][i]}
                     })
         }
     }
@@ -31,6 +48,7 @@
                 },
         yaxis: {
                 rangemode: 'tozero',
+                tickformat: tfs[{{ $tf }}]
                 },
     };
     var config = {responsive: false};

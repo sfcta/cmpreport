@@ -1,10 +1,13 @@
 ---
-title: "Pedestrian and bicycle safety"
-weight: 2
+title: "Other Indicators"
+weight: 5
+description: >
+  This page presents other miscellaneous performance metrics.
 ---
 
+### Pedestrian and bicycle safety
 
-{{% plotly_bar id="myChart1" csvfile="content/docs/2021/bikeped_fatalities.csv" title="Pedestrian and Bicycle Fatalities" %}}
+{{% plotly_bar id="myChart1" csvfile="content/docs/bikeped_fatalities.csv" title="Pedestrian and Bicycle Fatalities" %}}
 
 * Safety for pedestrians and cyclists are key measures of non-motorized transportation performance, and a critical policy priority for the city of San Francisco
 * The City and County of San Francisco adopted Vision Zero as a policy in 2014, committing to build better and safer streets, educate the public on traffic safety, enforce traffic laws, and adopt policy changes that save lives
