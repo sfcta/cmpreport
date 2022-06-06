@@ -7,9 +7,6 @@ enableRobotsTXT = true
 theme = "compose"
 enableGitInfo = true
 
-[params]
-  customCSS = ["css/custom.css"]
-
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [outputs]
