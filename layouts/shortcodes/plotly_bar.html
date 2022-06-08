@@ -2,6 +2,8 @@
 {{ $csv := getCSV "," $csvURL }}
 {{ $height := .Get "height" | default "400px" }}
 {{ $title := .Get "title" | default "" }}
+{{ $style := .Get "style" | default "style1" }}
+{{ $bmode := .Get "bmode" | default "group" }}
 
 <div id='{{ .Get "id" }}' style="height:{{$height}}">
 
@@ -10,7 +12,15 @@
 <script>
     var csvdata = {{ $csv }};
 
-    var colors = ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'];
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+        },
+        'style2': {
+            'color': ['', '#F7CF3F', '#CA7F9B', '#A8A9AB', '#F7CF3F'],
+        },
+
+    }
     var data = [];
     var xvals;
     for (let i in csvdata) {
@@ -20,7 +30,7 @@
             data.push({x: xvals, y: csvdata[i].slice(1),
                         name: csvdata[i][0],
                         type: 'bar',
-                        marker: {color: colors[i]}
+                        marker: {color: styles[{{ $style }}]['color'][i]}
                     })
         }
     }
@@ -32,7 +42,7 @@
         yaxis: {
                 rangemode: 'tozero',
                 },
-        barmode: 'stack',
+        barmode: {{ $bmode }},
     };
     var config = {responsive: false};
     Plotly.plot({{ .Get "id" }}, data, layout, config);

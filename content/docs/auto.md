@@ -16,9 +16,15 @@ description: >
 
 ### Level of Service
 
+The CMP legislation defines roadway performance primarily by using the Level of Service or LOS traffic engineering concept to evaluate the operating conditions on a roadway. LOS describes operating conditions on a scale of A to F, with “A” describing free flow, and “F” describing bumper-to-bumper conditions.
+
 <div id="wrap">
     <iframe id="scaled-frame" src="https://congestion.sfcta.org/"></iframe>
 </div>
+
+{{< tip >}}
+Explore a dynamic map of our congestion management data.
+{{< /tip >}}
 
 
 ### Reliability
