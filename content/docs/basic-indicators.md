@@ -31,7 +31,7 @@ weight: 2
 
 ### Mode Share
 
-{{% plotly_bar id="myChart4" csvfile="content/docs/mode_share.csv" title="Mode Share by Travel Market" bmode="stack" style="style3" tf="tf3" %}}
+{{% plotly_bar id="myChart4" csvfile="content/docs/mode_share.csv" title="Mode Share by Travel Market" bmode="stack" style="style3" tf="tf3" bw="0.5" %}}
 
 * Walking is by far the most prevalent mode used to get around within San Francisco
 * In contrast, travel to/ from San Francisco is dominated by driving (59.6%), but with a large transit share as well (39%)

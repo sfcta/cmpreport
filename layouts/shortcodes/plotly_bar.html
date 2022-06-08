@@ -6,6 +6,7 @@
 {{ $style := .Get "style" | default "style1" }}
 {{ $bmode := .Get "bmode" | default "group" }}
 {{ $tf := .Get "tf" | default "tf1" }}
+{{ $bw := .Get "bw" | default "auto" }}
 
 <div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
 
@@ -41,7 +42,8 @@
             data.push({x: xvals, y: csvdata[i].slice(1),
                         name: csvdata[i][0],
                         type: 'bar',
-                        marker: {color: styles[{{ $style }}]['color'][i]}
+                        marker: {color: styles[{{ $style }}]['color'][i]},
+                        width: {{ $bw }}
                     })
         }
     }
