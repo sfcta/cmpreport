@@ -1,11 +1,13 @@
 {{ $csvURL := .Get "csvfile" }}
 {{ $csv := getCSV "," $csvURL }}
 {{ $height := .Get "height" | default "400px" }}
+{{ $width := .Get "width" | default "800px" }}
 {{ $title := .Get "title" | default "" }}
 {{ $style := .Get "style" | default "style1" }}
 {{ $bmode := .Get "bmode" | default "group" }}
+{{ $tf := .Get "tf" | default "tf1" }}
 
-<div id='{{ .Get "id" }}' style="height:{{$height}}">
+<div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
 
 </div>
 
@@ -19,7 +21,16 @@
         'style2': {
             'color': ['', '#F7CF3F', '#CA7F9B', '#A8A9AB', '#F7CF3F'],
         },
+        'style3': {
+            'color': ['', '#69a1b9', '#7bacc1', '#8cb7c9', '#9dc2d1', '#afcdd9', '#e2b5c7', '#daa3b9', '#cc7e9d', '#be5981'],
+        },
 
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%',
+        'tf3': ',.1%'
     }
     var data = [];
     var xvals;
@@ -41,6 +52,7 @@
                 },
         yaxis: {
                 rangemode: 'tozero',
+                tickformat: tfs[{{ $tf }}]
                 },
         barmode: {{ $bmode }},
     };

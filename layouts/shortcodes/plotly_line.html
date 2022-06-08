@@ -1,11 +1,12 @@
 {{ $csvURL := .Get "csvfile" }}
 {{ $csv := getCSV "," $csvURL }}
 {{ $height := .Get "height" | default "400px" }}
+{{ $width := .Get "width" | default "800px" }}
 {{ $title := .Get "title" | default "" }}
 {{ $style := .Get "style" | default "style1" }}
 {{ $tf := .Get "tf" | default "tf1" }}
 
-<div id='{{ .Get "id" }}' style="height:{{$height}}">
+<div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
 
 </div>
 

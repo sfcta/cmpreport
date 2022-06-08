@@ -12,6 +12,7 @@ weight: 2
 * However, as a result of the COVID pandemic these growth trends were halted and reversed
 * More than 100,000 jobs were lost between 2019 and 2020
 
+
 ### Vehicle Miles Traveled (VMT)
 
 {{% plotly_line id="myChart2" csvfile="content/docs/vmt.csv" title="Daily Vehicle Miles Traveled on SF Roadways" %}}
@@ -19,9 +20,18 @@ weight: 2
 * VMT dipped about 5% between 2017 and 2019
 * Note that there is a two-year lag in this estimate provided by Caltrans
 
+
 ### Transit Ridership
 
 {{% plotly_line id="myChart3" csvfile="content/docs/transit_ridership.csv" title="Average Daily Passengers by Transit Operator" style="style2" %}}
 
 * Ridership on all three operators dropped significantly during shelter-in-place orders in April – May of 2020
 * Ridership has been gradually climbing back up every month
+
+
+### Mode Share
+
+{{% plotly_bar id="myChart4" csvfile="content/docs/mode_share.csv" title="Mode Share by Travel Market" bmode="stack" style="style3" tf="tf3" %}}
+
+* Walking is by far the most prevalent mode used to get around within San Francisco
+* In contrast, travel to/ from San Francisco is dominated by driving (59.6%), but with a large transit share as well (39%)
