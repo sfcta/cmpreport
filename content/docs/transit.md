@@ -29,3 +29,16 @@ description: >
 * A ratio of 2 would indicate that, for a particular segment, on-board transit travel time is twice that of auto travel time
 * The average auto-transit speed ratio increased between 2019 and 2021
 * Both average auto and transit speeds improved this year but auto speeds improved more than transit speeds which resulted in transit being less competitive relative to auto
+
+### Coverage
+
+{{< tip >}}
+SF Muni AM Peak Coverage 2021.
+{{< /tip >}}
+
+<div id="wrap">
+    <iframe id="scaled-frame" src="https://sfcta.github.io/simwrapper/files/viz-map-transitcov.yaml?embed"></iframe>
+</div>
+
+* The figure shows the area that is within a 5-minute walk of a given service level/frequency
+* Each service frequency layer also includes the areas covered by service frequencies lower than it; For example, the area coverage shown for “Any service” also includes the areas covered under 10-minute and 5-minute frequencies
